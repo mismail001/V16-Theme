@@ -1,0 +1,81 @@
+/* Swift Theme — field icons
+
+   The icon swift-field-icons.js puts on each form field, in the theme's
+   accent so it follows every preset and custom colours, light or dark.
+
+   Inside the box for plain inputs (.swift-has-input-icon on the
+   .control-input-wrapper): the icon sits in the first row of the box, at
+   the input's own height, so a one-line input centres it and a textarea
+   keeps it beside its first line. The wrapper is made the icon's containing
+   block — Frappe positions it only for Password, and relative here adds no
+   stacking context and leaves fixed-position popups alone. Start-edge
+   properties throughout, so right-to-left forms put it on the right.
+
+   Before the label for everything else (Check, Color, editors, tables). */
+
+.swift-field-icon {
+  --swift-fi-accent: var(--swift-accent, var(--primary));
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.swift-field-icon .icon {
+  --icon-stroke: var(--swift-fi-accent);
+  stroke: var(--swift-fi-accent);
+  width: 14px;
+  height: 14px;
+}
+
+/* ---- Inside the input ----------------------------------------------- */
+
+.frappe-control .control-input-wrapper.swift-has-input-icon {
+  --swift-fi-h: var(--input-height, 28px);
+  position: relative;
+}
+
+.swift-has-input-icon > .swift-field-icon {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 30px;
+  height: var(--swift-fi-h);
+  /* Select and Data-with-button wrap their input in a positioned box that
+     comes later in the DOM and would paint over the icon. */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.swift-has-input-icon > .swift-field-icon .icon {
+  opacity: 0.85;
+}
+
+.frappe-control .swift-has-input-icon .control-input .form-control,
+.frappe-control .swift-has-input-icon > .control-value {
+  padding-inline-start: 30px;
+}
+
+/* ---- Before the label ----------------------------------------------- */
+
+.frappe-control .control-label:has(> .swift-field-icon),
+.frappe-control .label-area:has(> .swift-field-icon),
+.grid-field > .control-label:has(> .swift-field-icon) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.control-label > .swift-field-icon,
+.label-area > .swift-field-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: calc(var(--swift-radius, var(--border-radius-md, 8px)) - 2px);
+  background: color-mix(in srgb, var(--swift-fi-accent) 12%, transparent);
+}
+
+.frappe-control[data-fieldtype="Check"] .label-area > .swift-field-icon {
+  width: 18px;
+  height: 18px;
+}

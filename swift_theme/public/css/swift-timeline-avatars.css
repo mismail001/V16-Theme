@@ -1,0 +1,23 @@
+/* Swift Theme — user avatars on the Activity timeline
+
+   The avatar swift-timeline-avatars.js puts in place of a timeline dot fills
+   Frappe's own .timeline-badge, so it keeps the badge's placement on the
+   line. The badge's grey disc goes; the avatar's shape comes from
+   swift-avatars.css like every other avatar. A hairline ring in the page
+   background separates it from the timeline line behind it. */
+
+.new-timeline .timeline-item .timeline-badge.swift-user-badge {
+  background: transparent;
+  border-radius: var(--swift-avatar-radius, 50%);
+}
+
+.new-timeline .swift-user-badge .avatar {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.new-timeline .swift-user-badge .avatar-frame {
+  font-size: 12px;
+  box-shadow: 0 0 0 2px var(--fg-color, var(--card-bg));
+}

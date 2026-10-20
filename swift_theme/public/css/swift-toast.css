@@ -1,0 +1,68 @@
+/* Swift Theme — Toasts (opt-in via data-swift-toast="on")
+
+   Since 16.50 every toast and every show_alert is Frappe's .es-toast, in
+   one .es-toast-container (frappe/ui/components/toast.js); the .desk-alert
+   these rules used to dress is gone. Frappe draws it as a dark pill on every
+   theme; here it is a card of the theme's own, with an edge in the colour of
+   what it says. */
+
+html[data-swift-toast="on"] .es-toast {
+  /* The pill's parts are drawn for a dark fill: its text, links and close
+     button are --ink-base (the card colour) and its hovers sit on the
+     darkest greys. On a card those would vanish, so inside the toast the
+     scale points the other way. */
+  --ink-base: var(--text-color);
+  --ink-gray-3: var(--text-muted);
+  --ink-gray-4: var(--text-muted);
+  --outline-gray-3: var(--border-color);
+  --surface-gray-8: var(--swift-accent-soft);
+  --swift-toast-edge: var(--swift-accent);
+
+  border: 1px solid var(--border-color);
+  border-inline-start: 3px solid var(--swift-toast-edge);
+  border-radius: var(--swift-radius, var(--radius-md));
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: var(--swift-shadow-md, var(--elevation-lg));
+}
+
+html[data-swift-toast="on"] .es-toast[data-type="success"] {
+  --swift-toast-edge: #16a34a;
+}
+
+html[data-swift-toast="on"] .es-toast[data-type="error"] {
+  --swift-toast-edge: #ef4444;
+}
+
+html[data-swift-toast="on"] .es-toast[data-type="warning"] {
+  --swift-toast-edge: #f59e0b;
+}
+
+/* A plain message has no icon of its own; the accent marks it as the
+   theme's. */
+html[data-swift-toast="on"] .es-toast[data-type="message"] > svg,
+html[data-swift-toast="on"] .es-toast[data-type="info"] > svg {
+  color: var(--swift-accent);
+}
+
+/* ---- Position: top instead of bottom ----
+   Frappe anchors the stack to the bottom corner. A toast confirming a save
+   reads better next to the action that caused it, and the page's actions
+   are in its head at the top, so the stack sits just under that head.
+   Toasts still slide in from the side, which reads the same at either end. */
+html[data-swift-toast="on"] .es-toast-container {
+  top: 64px;
+  bottom: auto;
+}
+
+/* Full-width strip on phones, still anchored to the top */
+@media (max-width: 575.98px) {
+  html[data-swift-toast="on"] .es-toast-container {
+    top: 10px;
+  }
+
+  html[data-swift-toast="on"] .es-toast {
+    min-width: 0;
+    max-width: none;
+  }
+}

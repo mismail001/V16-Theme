@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <style>
+    /* light touch: straight data pulses along the traces + one slow diagonal sheen across the mark */
+    .q-pulse { stroke-dasharray: 26 400; stroke-dashoffset: 426; opacity: 0.9; animation: q-run 3.6s linear infinite; animation-delay: calc(var(--i) * -0.9s); }
+    .q-sheen { animation: q-sweep 7s ease-in-out infinite; }
+    @keyframes q-run { to { stroke-dashoffset: 0; } }
+    @keyframes q-sweep { 0%, 55% { transform: translateX(-420px); } 100% { transform: translateX(560px); } }
+    @media (prefers-reduced-motion: reduce) { .q-pulse, .q-sheen { animation: none; } .q-pulse, .q-sheen { opacity: 0; } }
+  </style>
+  <defs>
+    <!-- bright rim: cyan at the top-left, a touch deeper toward the muzzle -->
+    <linearGradient id="enhA2-rim" gradientUnits="userSpaceOnUse" x1="150" y1="130" x2="420" y2="300">
+      <stop offset="0" stop-color="#3af4ff"/>
+      <stop offset="0.6" stop-color="#2ae6ff"/>
+      <stop offset="1" stop-color="#17c8f6"/>
+    </linearGradient>
+    <linearGradient id="enhA2-chin" gradientUnits="userSpaceOnUse" x1="326" y1="306" x2="334" y2="414">
+      <stop offset="0" stop-color="#26e8ff"/>
+      <stop offset="0.35" stop-color="#0d9cd6"/>
+      <stop offset="1" stop-color="#0b4f8a"/>
+    </linearGradient>
+    <linearGradient id="enhA2-edge" gradientUnits="userSpaceOnUse" x1="418" y1="255" x2="376" y2="372">
+      <stop offset="0" stop-color="#0d8fd0"/>
+      <stop offset="0.55" stop-color="#0b65a8"/>
+      <stop offset="1" stop-color="#0b4f8a" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="enhA2-shardR" gradientUnits="userSpaceOnUse" x1="396" y1="286" x2="370" y2="358">
+      <stop offset="0" stop-color="#19b4e8"/>
+      <stop offset="0.5" stop-color="#0d7fc4"/>
+      <stop offset="1" stop-color="#0b4f8a"/>
+    </linearGradient>
+    <linearGradient id="enhA2-shardR2" gradientUnits="userSpaceOnUse" x1="312" y1="314" x2="336" y2="366">
+      <stop offset="0" stop-color="#0f8cc8"/>
+      <stop offset="1" stop-color="#0b4f8a"/>
+    </linearGradient>
+    <linearGradient id="enhA2-bar" gradientUnits="userSpaceOnUse" x1="0" y1="336" x2="0" y2="412">
+      <stop offset="0" stop-color="#0b6aa0"/>
+      <stop offset="1" stop-color="#0b4f8a" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="enhA2-band" gradientUnits="userSpaceOnUse" x1="170" y1="240" x2="300" y2="410">
+      <stop offset="0" stop-color="#0b6e98"/>
+      <stop offset="1" stop-color="#064a6e"/>
+    </linearGradient>
+    <linearGradient id="enhA2-bandDeep" gradientUnits="userSpaceOnUse" x1="200" y1="330" x2="300" y2="420">
+      <stop offset="0" stop-color="#075a82"/>
+      <stop offset="1" stop-color="#064064" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="enhA2-shardL" gradientUnits="userSpaceOnUse" x1="172" y1="290" x2="207" y2="336">
+      <stop offset="0" stop-color="#1690c0"/>
+      <stop offset="1" stop-color="#0a5a86"/>
+    </linearGradient>
+    <linearGradient id="enhA2-shardM" gradientUnits="userSpaceOnUse" x1="254" y1="240" x2="284" y2="296">
+      <stop offset="0" stop-color="#0a5878"/>
+      <stop offset="1" stop-color="#1088b8"/>
+    </linearGradient>
+    <linearGradient id="enhA2-arc" gradientUnits="userSpaceOnUse" x1="123" y1="277" x2="215" y2="398">
+      <stop offset="0" stop-color="#0c74a0"/>
+      <stop offset="1" stop-color="#0a4e74"/>
+    </linearGradient>
+    <linearGradient id="enhA2-fangU" gradientUnits="userSpaceOnUse" x1="354" y1="228" x2="380" y2="266">
+      <stop offset="0" stop-color="#2eeaff"/>
+      <stop offset="1" stop-color="#0ab4e6"/>
+    </linearGradient>
+    <linearGradient id="enhA2-fangL" gradientUnits="userSpaceOnUse" x1="314" y1="272" x2="348" y2="318">
+      <stop offset="0" stop-color="#28e6ff"/>
+      <stop offset="1" stop-color="#0aa0d8"/>
+    </linearGradient>
+    <linearGradient id="enhA2-trace" gradientUnits="userSpaceOnUse" x1="90" y1="180" x2="240" y2="280">
+      <stop offset="0" stop-color="#14c6f6"/>
+      <stop offset="1" stop-color="#0a9ad4"/>
+    </linearGradient>
+    <!-- one soft glow: blur, scale alpha down, lay the crisp source on top -->
+    <filter id="enhA2-glow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feComponentTransfer in="b" result="g"><feFuncA type="linear" slope="0.65"/></feComponentTransfer>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="enhA2-sheen" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#bff7ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#bff7ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#bff7ff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="enhA2-sheen-clip">
+      <path d="M144,201 Q178,157 225,145 L200,135 L258,100 L240,88 L300,112 L360,150 L410,232 L418,255 L418,332 L376,372 L328,414 L215,398 A160,160 0 0 1 123,277 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===== face plate (lighter navy region inside the head) ===== -->
+  <polygon fill="#0a567a" points="294,148 306,152 326,160 347,168 342,176 369,184 392,192 404,198 414,210 415,216 405,228 397,241 389,251 384,282 374,292 360,301 346,305 334,278 316,271 305,270 299,258 294,246 282,238 274,230 273,214 263,206 261,196 266,182 261,174 273,166 283,158"/>
+  <!-- brow / forehead (brighter upper part of the plate) -->
+  <polygon fill="#0f6f98" points="294,148 306,152 326,160 347,168 342,176 369,184 392,192 402,198 316,198 306,204 296,196 283,158"/>
+  <!-- brow ridge highlight -->
+  <polygon fill="#1486b2" points="295,189 392,189 398,197 316,198 300,197"/>
+  <!-- muzzle highlight -->
+  <polygon fill="#0b6284" points="372,198 400,198 404,210 402,218 386,218 390,208"/>
+  <!-- eye (dark cut-out) -->
+  <polygon fill="#021e30" points="316,198 369,198 375,208 369,214 352,218 344,226 338,236 331,246 325,236 312,229 305,220 305,212 310,203"/>
+  <!-- open mouth: dark cavity between the fangs, under the lower lip -->
+  <polygon fill="#031626" points="318,262 350,252 362,268 388,256 386,276 377,290 364,300 348,306 342,292 334,280 322,273 314,270"/>
+  <!-- tongue hint deep in the cavity -->
+  <polygon fill="#083a58" points="340,266 360,274 372,286 362,296 350,300 344,288"/>
+
+  <!-- ===== upper-mane details: ear strand, chevron shards, cheek shard ===== -->
+  <line x1="275" y1="124" x2="304" y2="156" stroke="#0e5876" stroke-width="6" stroke-linecap="round"/>
+  <polygon fill="#0c5f7c" points="196,179 240,158 250,158 240,179"/>
+  <polygon fill="#0b5274" points="214,210 248,182 262,182 240,210"/>
+  <line x1="245" y1="223" x2="272" y2="194" stroke="#0a6a90" stroke-width="4" stroke-linecap="round"/>
+  <polygon fill="url(#enhA2-shardM)" points="254,238 259,238 268,258 278,270 284,296 278,292 268,280 258,270 254,262"/>
+  <!-- bright cheek-edge line -->
+  <polyline fill="none" stroke="#12bcee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="285,199 278,208 276,216 276,224 279,231 286,238 292,243 295,247"/>
+
+  <!-- ===== lower-left mane: 45-degree bands, denser toward the bottom ===== -->
+  <polygon fill="url(#enhA2-shardL)" points="172,300 183,290 196,295 207,307 207,336"/>
+  <polygon fill="#07506e" points="150,296 156,296 160,312 158,328 153,326 150,312"/>
+  <polygon fill="#064a68" points="164,322 170,320 201,352 201,358 191,358 164,330"/>
+  <g fill="none" stroke="url(#enhA2-band)" stroke-linecap="round" stroke-linejoin="round">
+    <polyline stroke-width="6" points="182,225 198,242 198,278 252,330 273,350"/>
+    <polyline stroke-width="6" points="231,258 231,276 297,341 297,400"/>
+    <line stroke-width="5" x1="152" y1="245" x2="152" y2="260"/>
+  </g>
+  <g fill="url(#enhA2-bandDeep)">
+    <polygon points="221,360 226,359 268,404 266,410 221,367"/>
+    <polygon points="238,350 246,348 292,394 290,402 238,358"/>
+    <polygon points="183,329 195,329 216,352 216,367"/>
+    <path d="M258,336 L269,336 Q279,356 278,390 Z"/>
+    <polygon points="224,325 239,341 237,348 231,346 224,334"/>
+  </g>
+  <!-- outer mane arc (open on the left where the traces enter) -->
+  <path d="M123,277 A160,160 0 0 0 215,398" fill="none" stroke="url(#enhA2-arc)" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- ===== lower-right mane: shards fade to the deep blue ===== -->
+  <polyline fill="none" stroke="url(#enhA2-edge)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="418,255 418,332 376,372"/>
+  <polygon fill="url(#enhA2-shardR)" points="378,303 396,286 397,328 368,357 368,348 378,338"/>
+  <polygon fill="#22d8f8" fill-opacity="0.55" points="379,305 396,288 396,300"/>
+  <polygon fill="url(#enhA2-shardR2)" points="310,314 320,314 337,332 337,356 333,366 325,357 325,330"/>
+  <polygon fill="#07486a" points="313,372 325,385 314,397"/>
+  <line x1="300" y1="336" x2="298" y2="412" stroke="url(#enhA2-bar)" stroke-width="5" stroke-linecap="round"/>
+  <polyline fill="none" stroke="url(#enhA2-chin)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" points="350,334 350,392 328,414"/>
+
+  <!-- ===== circuit traces (left) ===== -->
+  <g fill="none" stroke="url(#enhA2-trace)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="116" y1="187" x2="190" y2="187"/>
+    <polyline points="104,226 122,210 190,210 204,226 243,226"/>
+    <polyline points="92,232 138,232 146,224 182,224"/>
+    <line x1="96" y1="276" x2="156" y2="276"/>
+    <rect x="131" y="155" width="12" height="12" stroke-width="3.5"/>
+    <rect x="228" y="240" width="12" height="12" stroke-width="3.5"/>
+    <circle cx="203" cy="194" r="4.5" stroke-width="3.5"/>
+    <circle cx="84" cy="232" r="6" stroke-width="3.5"/>
+    <circle cx="163" cy="276" r="5.5" stroke-width="3.5"/>
+  </g>
+  <!-- data pulses travelling along the traces toward the head -->
+  <g class="q-pulses" fill="none" stroke="#7ff6ff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <line class="q-pulse" style="--i:0" x1="116" y1="187" x2="190" y2="187"/>
+    <polyline class="q-pulse" style="--i:1" points="104,226 122,210 190,210 204,226 243,226"/>
+    <polyline class="q-pulse" style="--i:2" points="92,232 138,232 146,224 182,224"/>
+    <line class="q-pulse" style="--i:3" x1="96" y1="276" x2="156" y2="276"/>
+  </g>
+  <rect x="112" y="245" width="16" height="16" fill="#0a7cb4"/>
+
+  <!-- ===== bright outline, spike, ear, nose, fangs, lower lip (glow) ===== -->
+    <!-- slow straight sheen sweeping across the mark -->
+  <g clip-path="url(#enhA2-sheen-clip)">
+    <rect class="q-sheen" x="-60" y="40" width="70" height="460" transform="skewX(-18)" fill="url(#enhA2-sheen)"/>
+  </g>
+  <g filter="url(#enhA2-glow)">
+    <!-- sweep + spike sliver + ear + brow + muzzle front, ending at the nose -->
+    <path fill="none" stroke="url(#enhA2-rim)" stroke-width="9" stroke-linejoin="miter" stroke-miterlimit="14" stroke-linecap="round"
+          d="M144,201 Q178,157 225,145 L200,135 L258,129 L254,123 L245,94 L262,104 L283,112 L302,124 L316,134 L337,146 L358,154 L368,162 L375,174 L381,178 L394,182 L403,186 L419,194 L420,200 L415,216 L405,228 L397,241"/>
+    <!-- filled tips so the ear and the spike stay needle-sharp -->
+    <polygon fill="#3af4ff" points="240,88 258,100 248,108"/>
+    <polygon fill="#34f0ff" points="258,127 230,127 214,130 196,135 209,139 218,146 222,138 232,134"/>
+    <!-- face definition: brow line, bright eye slit, cheek line down to the mouth corner -->
+    <polyline fill="none" stroke="#2ae8ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="296,194 340,190 396,192"/>
+    <polygon fill="#5ff7ff" points="322,205 356,203 349,214 334,217"/>
+    <polygon fill="#0b2a3c" points="334,207 349,206 346,212 338,213"/>
+    <polyline fill="none" stroke="#1fd4f4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" points="309,226 314,244 318,262"/>
+    <!-- nose wedge -->
+    <polygon fill="#2ae6ff" points="384,232 399,239 393,254 384,250"/>
+    <!-- lower lip: starts under the nose, curls down to the chin -->
+    <path fill="none" stroke="url(#enhA2-rim)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+          d="M389,252 C388,266 383,281 374,291 C368,298 358,303 346,306"/>
+    <!-- upper fang -->
+    <polygon fill="url(#enhA2-fangU)" stroke="#2ae8ff" stroke-width="3.5" stroke-linejoin="round" points="356,229 374,226 381,233 381,250 377,262 369,268 360,262 353,250 352,238"/>
+    <!-- lower fang -->
+    <path fill="url(#enhA2-fangL)" stroke="#2ae8ff" stroke-width="3.5" stroke-linejoin="round" d="M314,271 L328,272 C341,277 349,290 348,306 L344,318 L326,306 L316,292 Z"/>
+    <!-- chin edge from the lower fang (bright, hands off to the fading bar) -->
+    <polyline fill="none" stroke="url(#enhA2-chin)" stroke-width="6" stroke-linecap="round" points="326,306 350,334"/>
+  </g>
+</svg>

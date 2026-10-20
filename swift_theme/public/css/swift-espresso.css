@@ -1,0 +1,143 @@
+/* Swift Theme — Frappe's own colour scale, drawn from the theme
+
+   Since 16.50 Frappe paints its own components — buttons, menus, the dock,
+   breadcrumbs, tabs, badges, toasts, tooltips — from one scale of tokens
+   (frappe/public/css/espresso/colors.css): --surface-*, --ink-* and
+   --outline-*. The names a preset sets (--bg-color, --text-color,
+   --border-color ...) are only aliases of that scale now. Setting an alias
+   does not reach a component that reads the scale itself, so under a dark
+   preset those components were drawn in Frappe's light greys: white buttons,
+   a white dock, page titles in dark ink on a dark page.
+
+   The scale is derived here from the theme's roles, laid out the way Frappe
+   lays out its own: each step sits as far from the card towards the text as
+   Frappe's grey does from white (light) or from its darkest grey (dark).
+   One rule serves both a preset's stylesheet and Custom Colors, because both
+   set the same --swift-* roles.
+
+   Surfaces lean slightly towards the primary, the way the theme's controls
+   already do, so a hover or a pressed button reads as part of the theme
+   rather than as a neutral grey laid over it. Text stays on the theme's own
+   ink. */
+
+html[data-swift-themed] {
+  --swift-tone: color-mix(in srgb, var(--swift-on-surface), var(--swift-primary) 14%);
+
+  --surface-base: var(--swift-surface);
+  --surface-gray-1: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 3%);
+  --surface-gray-2: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 5%);
+  --surface-gray-3: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 7.5%);
+  --surface-gray-4: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 12%);
+  --surface-gray-5: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 23%);
+  --surface-gray-6: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 42.5%);
+  --surface-gray-7: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 54.5%);
+  --surface-gray-8: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 72%);
+  --surface-gray-9: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 83%);
+  --surface-gray-10: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 96.5%);
+  --surface-sidebar: var(--swift-surface-alt);
+  --surface-elevation-1: var(--swift-surface);
+  --surface-elevation-2: var(--swift-surface);
+  --surface-elevation-3: var(--swift-surface);
+
+  --surface-alpha-gray-1: color-mix(in srgb, var(--swift-tone) 3%, transparent);
+  --surface-alpha-gray-2: color-mix(in srgb, var(--swift-tone) 4.5%, transparent);
+  --surface-alpha-gray-3: color-mix(in srgb, var(--swift-tone) 7%, transparent);
+  --surface-alpha-gray-4: color-mix(in srgb, var(--swift-tone) 11.5%, transparent);
+  --surface-alpha-gray-5: color-mix(in srgb, var(--swift-tone) 22%, transparent);
+  --surface-alpha-gray-6: color-mix(in srgb, var(--swift-tone) 40%, transparent);
+  --surface-alpha-gray-7: color-mix(in srgb, var(--swift-tone) 51.5%, transparent);
+  --surface-alpha-gray-8: color-mix(in srgb, var(--swift-tone) 68%, transparent);
+  --surface-alpha-gray-9: color-mix(in srgb, var(--swift-tone) 78%, transparent);
+  --surface-alpha-gray-10: color-mix(in srgb, var(--swift-tone) 91%, transparent);
+  --surface-alpha-gray-2-overlay: color-mix(in srgb, var(--swift-on-surface) 9%, transparent);
+
+  /* Text on a filled control (a solid button, a tooltip) is the card colour,
+     as white is in Frappe's light scale and its darkest grey in the dark. */
+  --ink-base: var(--swift-surface);
+  --ink-gray-1: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 7.5%);
+  --ink-gray-2: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 12%);
+  --ink-gray-3: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 23%);
+  --ink-gray-4: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 42.5%);
+  --ink-gray-5: var(--swift-muted);
+  --ink-gray-6: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 72%);
+  --ink-gray-7: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 83%);
+  --ink-gray-8: var(--swift-on-surface);
+  --ink-gray-9: var(--swift-on-canvas);
+
+  /* Step 2 is the hairline Frappe draws its structure with (cards, dividers,
+     the sidebar's edges, an outline button). It is the theme's own border, so
+     a Frappe card and a theme card meet with the same line. */
+  --outline-base: var(--swift-surface);
+  --outline-gray-1: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 7.5%);
+  --outline-gray-2: var(--swift-border);
+  --outline-gray-3: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 23%);
+  --outline-gray-4: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 42.5%);
+  --outline-gray-5: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 54.5%);
+  --outline-gray-6: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 72%);
+  --outline-gray-7: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 83%);
+  --outline-gray-8: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 96.5%);
+  --outline-gray-9: var(--swift-on-surface);
+  --outline-elevation-1: var(--outline-gray-1);
+  --outline-elevation-2: var(--swift-border);
+}
+
+/* Dark: Frappe's dark greys are closer together near the bottom, and what
+   floats (a menu, a popover, the dock) is lighter than the card it is over,
+   because in the dark depth comes from light rather than from shadow. */
+html[data-swift-themed][data-theme="dark"] {
+  --surface-gray-1: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 3.5%);
+  --surface-gray-2: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 8%);
+  --surface-gray-3: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 14.5%);
+  --surface-gray-4: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 19%);
+  --surface-gray-5: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 28.5%);
+  --surface-gray-6: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 44%);
+  --surface-gray-7: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 58%);
+  --surface-gray-8: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 67.5%);
+  --surface-gray-9: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 86%);
+  --surface-gray-10: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 100%);
+  --surface-elevation-2: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 4%);
+  --surface-elevation-3: color-mix(in srgb, var(--swift-surface), var(--swift-tone) 9%);
+
+  --surface-alpha-gray-1: color-mix(in srgb, var(--swift-tone) 5.5%, transparent);
+  --surface-alpha-gray-2: color-mix(in srgb, var(--swift-tone) 8%, transparent);
+  --surface-alpha-gray-3: color-mix(in srgb, var(--swift-tone) 14%, transparent);
+  --surface-alpha-gray-4: color-mix(in srgb, var(--swift-tone) 18.5%, transparent);
+  --surface-alpha-gray-5: color-mix(in srgb, var(--swift-tone) 27.5%, transparent);
+  --surface-alpha-gray-6: color-mix(in srgb, var(--swift-tone) 42.5%, transparent);
+  --surface-alpha-gray-7: color-mix(in srgb, var(--swift-tone) 56%, transparent);
+  --surface-alpha-gray-8: color-mix(in srgb, var(--swift-tone) 66%, transparent);
+  --surface-alpha-gray-9: color-mix(in srgb, var(--swift-tone) 83%, transparent);
+  --surface-alpha-gray-10: color-mix(in srgb, var(--swift-tone) 97%, transparent);
+  --surface-alpha-gray-2-overlay: color-mix(in srgb, var(--swift-on-surface) 10%, transparent);
+
+  --ink-gray-1: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 6%);
+  --ink-gray-2: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 14.5%);
+  --ink-gray-3: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 19%);
+  --ink-gray-4: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 44%);
+  --ink-gray-6: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 58%);
+  --ink-gray-7: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 67.5%);
+
+  --outline-gray-1: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 6%);
+  --outline-gray-3: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 19%);
+  --outline-gray-4: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 28.5%);
+  --outline-gray-5: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 44%);
+  --outline-gray-6: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 58%);
+  --outline-gray-7: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 67.5%);
+  --outline-gray-8: color-mix(in srgb, var(--swift-surface), var(--swift-on-surface) 86%);
+}
+
+/* Dark: body and heading text are pure white, not the preset's tinted
+   off-white (Hulk's #eef6e4, Winter Soldier's #e6edf5 ...). Set on the roles
+   the rest of the scale reads, so --ink-gray-8/9 and every ink step mixed
+   from --swift-on-surface follow. Muted text (--swift-muted, --text-muted)
+   is left alone on purpose: it is what keeps labels and secondary text a
+   step below the content.
+
+   !important because a custom palette is applied by swift-boot.js as inline
+   styles on <html>, which a plain declaration here would lose to. */
+html[data-swift-themed][data-theme="dark"] {
+  --swift-on-canvas: #ffffff !important;
+  --swift-on-surface: #ffffff !important;
+  --text-color: #ffffff !important;
+  --heading-color: #ffffff !important;
+}

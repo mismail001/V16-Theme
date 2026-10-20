@@ -1,0 +1,277 @@
+/* Swift Theme — desk search
+
+   Frappe v16 has no search box in a top navbar. Search is a modal
+   (awesome_bar.js) opened from the "Search" row in the sidebar's standard
+   band, or the search icon in the page head on a phone. Both ends are
+   styled here:
+
+   * the sidebar row reads as a search field — a framed box on the card
+     colour — rather than one more menu item;
+   * in the modal, the input row is a large framed field with the accent on
+     focus, results are rounded rows with the selected one marked in the
+     accent, and the footer's key hints are keycaps.
+
+   The input row's border and focus ring were first set in
+   swift-preset-base.css with !important, so the overrides here need it too.
+   The old `.navbar #navbar-search` rules in swift-desk.css match nothing on
+   v16 and are left for older desks. */
+
+/* ---- The modal ------------------------------------------------------ */
+
+html[data-swift-themed] .modal:has(.navbar-modal-wrapper) .modal-content {
+  border: 1px solid var(--border-color);
+  border-radius: var(--swift-radius, 12px);
+  box-shadow:
+    0 24px 60px -12px color-mix(in srgb, var(--text-color) 28%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--swift-accent, var(--primary)) 8%, transparent);
+  overflow: hidden;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper {
+  padding: 12px !important;
+}
+
+/* The input row carries its own frame now; Frappe's divider sat at a fixed
+   40px for its shorter row and would cut through this one. */
+html[data-swift-themed] .navbar-modal-wrapper .modal-divider {
+  display: none;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomebar-input-row {
+  height: 44px;
+  padding: 0 6px;
+  background: var(--card-bg) !important;
+  border: 1.5px solid color-mix(in srgb, var(--text-color) 22%, var(--card-bg)) !important;
+  border-radius: var(--swift-radius-sm, 8px);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--text-color) 6%, transparent) !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomebar-input-row:focus-within {
+  border-color: var(--swift-accent, var(--primary)) !important;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--swift-accent, var(--primary)) 18%, transparent) !important;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomebar-search-icon {
+  padding-left: 8px;
+  padding-right: 4px;
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomebar-search-icon .icon {
+  width: 18px;
+  height: 18px;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomebar-input-row:focus-within .awesomebar-search-icon {
+  color: var(--swift-accent, var(--primary));
+  --icon-stroke: var(--swift-accent, var(--primary));
+}
+
+html[data-swift-themed] .navbar-modal-wrapper #navbar-search {
+  height: 40px;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+html[data-swift-themed] .navbar-modal-wrapper #navbar-search::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+/* Results */
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul {
+  margin-top: 10px;
+  padding: 0;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul > li {
+  position: relative;
+  margin: 1px 0;
+  padding: 0;
+  border-radius: var(--swift-radius-sm, 6px);
+  transition: background-color 0.1s ease;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul > li > a {
+  display: block;
+  padding: 7px 12px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul > li:hover {
+  background-color: color-mix(in srgb, var(--text-color) 5%, transparent);
+}
+
+/* The keyboard-selected row: an accent tint and a bar down its left. */
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul > li[aria-selected="true"] {
+  background-color: color-mix(in srgb, var(--swift-accent, var(--primary)) 12%, transparent);
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul > li[aria-selected="true"]::before {
+  content: "";
+  position: absolute;
+  inset-block: 6px;
+  inset-inline-start: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--swift-accent, var(--primary));
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul > li[aria-selected="true"] > a {
+  color: var(--text-color);
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete > ul > li .text-muted {
+  font-size: 12px;
+}
+
+html[data-swift-themed] .navbar-modal-wrapper .awesomplete mark {
+  padding: 0;
+  background: transparent;
+  color: var(--swift-accent, var(--primary));
+  font-weight: 600;
+}
+
+/* Footer: the key hints as keycaps. */
+html[data-swift-themed] .cool-awesomebar-modal-footer {
+  border-top: 1px solid var(--border-color);
+  background: color-mix(in srgb, var(--text-color) 2.5%, var(--card-bg));
+  color: var(--text-muted);
+}
+
+html[data-swift-themed] .awesomebar-modal-footer .help-item {
+  min-width: 20px;
+  justify-content: center;
+  background-color: var(--card-bg) !important;
+  border: 1px solid color-mix(in srgb, var(--text-color) 20%, var(--card-bg));
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* ---- The sidebar's Search row ---------------------------------------- */
+
+/* TypeButton swaps the row's own classes for the item's, so the container
+   carries .navbar-modal-search-mobile rather than .sidebar-item-container. */
+html[data-swift-themed] .body-sidebar .navbar-modal-search-mobile .standard-sidebar-item {
+  background: var(--card-bg);
+  border: 1px solid color-mix(in srgb, var(--text-color) 18%, var(--card-bg));
+  border-radius: var(--swift-radius-sm, 8px);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--text-color) 6%, transparent);
+  cursor: text;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+html[data-swift-themed] .body-sidebar .navbar-modal-search-mobile .standard-sidebar-item:hover {
+  background: var(--card-bg);
+  border-color: var(--swift-accent, var(--primary));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--swift-accent, var(--primary)) 14%, transparent);
+}
+
+html[data-swift-themed] .body-sidebar .navbar-modal-search-mobile .sidebar-item-label {
+  color: var(--text-muted);
+}
+
+/* Collapsed to the icon rail the row is a lone glyph; a frame round it
+   would only look like a stray button. */
+html[data-swift-themed] .body-sidebar-container:not(.expanded) .navbar-modal-search-mobile .standard-sidebar-item {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* On the brand-filled sidebar the field sits on the brand colour. */
+html[data-swift-sidebar-fill="brand"] .body-sidebar .navbar-modal-search-mobile .standard-sidebar-item {
+  background: color-mix(in oklab, var(--swift-sidebar-fg, var(--swift-accent-fg)) 10%, transparent);
+  border-color: color-mix(in oklab, var(--swift-sidebar-fg, var(--swift-accent-fg)) 28%, transparent);
+  box-shadow: none;
+}
+
+html[data-swift-sidebar-fill="brand"] .body-sidebar .navbar-modal-search-mobile .sidebar-item-label {
+  color: color-mix(in oklab, var(--swift-sidebar-fg, var(--swift-accent-fg)) 80%, transparent);
+}
+
+/* ---- The Apps screen's search button (desk/page/desktop) --------------
+   #search-widget-button sits in a wrapper that also carries .search-bar, so
+   it picked up the frame swift-preset-base.css gives .search-bar on top of
+   its own: two borders, 300px and 288px wide, square-cornered, on a grey
+   fill. The wrapper's frame goes, and the button becomes one field matching
+   the search modal it opens: the card colour, a rounded border with a soft
+   shadow, the accent on hover and focus, and the shortcut as a keycap. */
+html[data-swift-themed] .search-widget-wrapper.search-bar {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html[data-swift-themed] .search-widget-wrapper.search-bar:focus-within {
+  box-shadow: none !important;
+}
+
+html[data-swift-themed] .search-widget-button {
+  height: 36px;
+  padding: 0 6px 0 12px;
+  background: var(--card-bg);
+  border: 1px solid color-mix(in srgb, var(--text-color) 16%, var(--card-bg));
+  border-radius: 999px;
+  box-shadow:
+    0 1px 2px color-mix(in srgb, var(--text-color) 6%, transparent),
+    0 4px 14px -6px color-mix(in srgb, var(--text-color) 14%, transparent);
+  color: var(--text-muted);
+  cursor: text;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+html[data-swift-themed] .search-widget-button:hover {
+  background: var(--card-bg);
+  border-color: color-mix(in srgb, var(--swift-accent, var(--primary)) 55%, var(--card-bg));
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--swift-accent, var(--primary)) 12%, transparent),
+    0 6px 18px -8px color-mix(in srgb, var(--swift-accent, var(--primary)) 35%, transparent);
+}
+
+html[data-swift-themed] .search-widget-button:focus-visible {
+  outline: none;
+  border-color: var(--swift-accent, var(--primary));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--swift-accent, var(--primary)) 20%, transparent);
+}
+
+/* Frappe puts the label text inside the icon span. */
+html[data-swift-themed] .search-widget-button .search-widget-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: var(--text-sm, 13px);
+  color: var(--text-muted);
+}
+
+html[data-swift-themed] .search-widget-button .search-widget-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--text-muted);
+  transition: stroke 0.15s ease;
+}
+
+html[data-swift-themed] .search-widget-button:hover .search-widget-icon svg {
+  stroke: var(--swift-accent, var(--primary));
+}
+
+html[data-swift-themed] .search-widget-button .search-widget-shortcut {
+  padding: 2px 8px;
+  border: 1px solid color-mix(in srgb, var(--text-color) 16%, var(--card-bg));
+  border-bottom-width: 2px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text-color) 3%, var(--card-bg));
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+}

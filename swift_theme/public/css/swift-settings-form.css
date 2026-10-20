@@ -1,0 +1,177 @@
+/* Swift Theme — Swift Theme Settings form
+
+   The settings form dressed as the theme it configures: icons on every tab,
+   section and field (added by swift_theme_settings.js from Frappe's own
+   Lucide sprite), sections as cards, inputs with an accent focus ring.
+
+   Scoped to .swift-settings-form, which the form's JS puts on its page
+   wrapper, so no other form changes. Colour only — Frappe's position,
+   z-index, overflow and pointer-events are left alone (REQUIREMENT §7). */
+
+.swift-settings-form {
+  --swift-sf-accent: var(--swift-accent, var(--primary));
+  --swift-sf-soft: color-mix(in srgb, var(--swift-sf-accent) 12%, transparent);
+  --swift-sf-ring: color-mix(in srgb, var(--swift-sf-accent) 28%, transparent);
+  --swift-sf-radius: var(--swift-radius, var(--border-radius-md, 8px));
+}
+
+/* ---- Tabs ----------------------------------------------------------- */
+
+/* The tabs themselves are swift-form-tabs.css, the same as every form's;
+   this form only adds the icon in each. */
+.swift-settings-form .swift-tab-icon {
+  display: inline-flex;
+}
+
+/* ---- Sections ------------------------------------------------------- */
+
+.swift-settings-form .form-section.card-section.visible-section {
+  margin: 12px 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--swift-sf-radius);
+  background: var(--card-bg);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--text-color) 6%, transparent);
+}
+
+.swift-settings-form .form-section .section-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-base, 14px);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.swift-settings-form .swift-section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--swift-sf-radius);
+  background: var(--swift-sf-accent);
+}
+
+.swift-settings-form .swift-section-icon .icon {
+  --icon-stroke: var(--swift-accent-fg, var(--card-bg));
+  stroke: var(--swift-accent-fg, var(--card-bg));
+}
+
+/* ---- Field labels --------------------------------------------------- */
+
+/* The icons themselves are swift-field-icons.css; this form draws them a
+   size up, since it has the room and every field is a setting to find. */
+.swift-settings-form .frappe-control .control-label,
+.swift-settings-form .frappe-control .label-area {
+  gap: 8px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.swift-settings-form .control-label > .swift-field-icon,
+.swift-settings-form .label-area > .swift-field-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icons inside the box centre on this form's taller inputs. */
+.swift-settings-form .frappe-control .control-input-wrapper.swift-has-input-icon {
+  --swift-fi-h: 36px;
+}
+
+.swift-settings-form .frappe-control .swift-has-input-icon .control-input .form-control,
+.swift-settings-form .frappe-control .swift-has-input-icon > .control-value {
+  padding-inline-start: 34px;
+}
+
+.swift-settings-form .swift-has-input-icon > .swift-field-icon {
+  width: 34px;
+}
+
+/* Help text sits under the label text, not under the icon. */
+.swift-settings-form .frappe-control:not([data-fieldtype="Check"]) .help-box {
+  margin-top: 6px;
+  color: var(--text-muted);
+}
+
+/* ---- Inputs --------------------------------------------------------- */
+
+.swift-settings-form .frappe-control .form-control {
+  border: 1px solid var(--border-color);
+  border-radius: var(--swift-sf-radius);
+  background-color: var(--control-bg);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+/* Frappe's controls are 28px with no border; the border above would leave
+   the text clipped, so single-line controls get the room back. */
+.swift-settings-form .frappe-control input.form-control,
+.swift-settings-form .frappe-control select.form-control {
+  height: 36px;
+  padding-block: 6px;
+}
+
+/* The colour swatch sits over the input at Frappe's 28px offsets; recentre it
+   for the taller control and keep the hex clear of it. */
+.swift-settings-form .frappe-control[data-fieldtype="Color"] input.form-control {
+  padding-inline-start: 34px;
+}
+
+.swift-settings-form .frappe-control[data-fieldtype="Color"] .control-input .selected-color {
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+}
+
+.swift-settings-form .frappe-control .form-control:hover {
+  border-color: color-mix(in srgb, var(--swift-sf-accent) 40%, var(--border-color));
+}
+
+.swift-settings-form .frappe-control .form-control:focus {
+  border-color: var(--swift-sf-accent);
+  background-color: var(--card-bg);
+  box-shadow: 0 0 0 3px var(--swift-sf-ring);
+}
+
+/* ---- Checkboxes as rows --------------------------------------------- */
+
+.swift-settings-form .frappe-control[data-fieldtype="Check"] .checkbox {
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--swift-sf-radius);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.swift-settings-form .frappe-control[data-fieldtype="Check"] .checkbox:hover {
+  border-color: var(--border-color);
+  background: var(--swift-sf-soft);
+}
+
+.swift-settings-form .frappe-control[data-fieldtype="Check"] label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swift-settings-form .frappe-control[data-fieldtype="Check"] input[type="checkbox"]:checked {
+  background-color: var(--swift-sf-accent);
+  border-color: var(--swift-sf-accent);
+}
+
+.swift-settings-form .frappe-control[data-fieldtype="Check"] input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 3px var(--swift-sf-ring);
+}
+
+/* Check help lines up with the label text: box + gap + icon + gap. */
+.swift-settings-form .frappe-control[data-fieldtype="Check"] .help-box {
+  margin: 2px 0 0 calc(var(--checkbox-size, 14px) + 8px + 24px + 8px);
+  color: var(--text-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swift-settings-form .frappe-control .form-control,
+  .swift-settings-form .frappe-control[data-fieldtype="Check"] .checkbox {
+    transition: none;
+  }
+}

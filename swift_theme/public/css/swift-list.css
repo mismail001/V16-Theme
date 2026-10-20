@@ -1,0 +1,307 @@
+/* Swift Theme — List view
+
+   One card for the list, rows at the density's height, and the row states
+   drawn in the theme's own colours.
+
+   Height comes from Frappe's own --list-row-height, set to --swift-row-h
+   (Compact 30 / Comfortable 36 / Cozy 44): Frappe derives the checkbox
+   cell's padding from it, so the row and the checkbox agree with nothing
+   added on top. The vertical padding Frappe and the theme put on the parts
+   of a row is taken out, since it only made the row taller than that.
+
+   Row fills are opaque mixes over --card-bg, not translucent tints. The
+   meta column on the right is sticky and copies the row's fill
+   (background: inherit); a translucent fill there would let the columns
+   scrolling underneath show through it.
+
+   Colour and spacing only — Frappe's sticky header, sticky meta column and
+   their z-index stay as Frappe sets them (REQUIREMENT §7). */
+
+html[data-swift-themed] .frappe-list {
+  --list-row-height: var(--swift-row-h, 36px);
+  --swift-list-fill: var(--card-bg);
+  --swift-list-stripe: color-mix(in srgb, var(--text-color) 2.5%, var(--card-bg));
+  --swift-list-hover: color-mix(in srgb, var(--swift-accent, var(--primary)) 8%, var(--card-bg));
+  --swift-list-picked: color-mix(in srgb, var(--swift-accent, var(--primary)) 14%, var(--card-bg));
+}
+
+/* ---- The list as one card ------------------------------------------- */
+
+/* .result, not .result-container: the container is stretched to the page's
+   height, so a short list sat in a tall empty card. */
+html[data-swift-themed] .frappe-list .result {
+  border: 1px solid var(--border-color);
+  border-radius: var(--swift-radius, 12px);
+  background: var(--card-bg);
+  box-shadow: var(--swift-shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
+}
+
+/* ---- Row height ----------------------------------------------------- */
+
+html[data-swift-themed] .frappe-list .list-row {
+  min-height: var(--list-row-height);
+  height: var(--list-row-height);
+}
+
+html[data-swift-themed] .frappe-list .list-row .level-left,
+html[data-swift-themed] .frappe-list .list-row .list-row-col,
+html[data-swift-themed] .frappe-list .list-row .list-subject {
+  padding-block: 0;
+}
+
+/* The meta column had its own 9px padding; it now fills the row's height
+   and centres its contents instead. */
+html[data-swift-themed] .frappe-list .list-row .level-right {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding-block: 0;
+  border-inline-start: 1px solid var(--border-color);
+  background: inherit;
+}
+
+/* ---- Header --------------------------------------------------------- */
+
+/* A solid bar in the theme's primary colour — Swift Theme Settings >
+   Primary Color in Custom Colors mode, the preset's primary otherwise — so
+   it matches the logo and the rest of the brand. swift-boot.js writes that
+   setting into --swift-accent. The column names, the count and the icons
+   on it are always white. Uppercase and
+   bold, the count included, so the bar reads as one strip of labels. */
+html[data-swift-themed] .frappe-list {
+  --swift-list-head: var(--swift-accent, var(--primary));
+  --swift-list-head-ink: #ffffff;
+}
+
+html[data-swift-themed] .frappe-list .list-row-head {
+  background: var(--swift-list-head);
+  border-bottom: 0;
+  border-radius: var(--swift-radius-sm, 6px) var(--swift-radius-sm, 6px) 0 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--swift-list-head-ink);
+}
+
+html[data-swift-themed] .frappe-list .list-row-head .level-right {
+  background: var(--swift-list-head);
+  border-inline-start-color: transparent;
+}
+
+/* !important because Frappe puts Bootstrap's .text-muted on the header
+   itself (list_view.js: <header class="level list-row-head text-muted">),
+   and .text-muted sets its grey with !important — a plain colour here lost
+   to it and the labels stayed grey. Every descendant too: the column links,
+   the count and the heart are muted by rules of their own. A dropdown opened
+   from the header is left alone, or it would be white text on a white menu. */
+html[data-swift-themed] .frappe-list .list-row-head,
+html[data-swift-themed] .frappe-list .list-row-head *:not(.dropdown-menu, .dropdown-menu *) {
+  color: var(--swift-list-head-ink) !important;
+}
+
+html[data-swift-themed] .frappe-list .list-row-head .icon {
+  --icon-stroke: var(--swift-list-head-ink);
+  stroke: var(--swift-list-head-ink);
+}
+
+/* The select-all box: an outline in the bar's ink, filled in it when ticked. */
+html[data-swift-themed] .frappe-list .list-row-head .list-check-all {
+  background-color: transparent;
+  border-color: color-mix(in srgb, var(--swift-list-head-ink) 85%, transparent);
+  box-shadow: none;
+}
+
+html[data-swift-themed] .frappe-list .list-row-head .list-check-all:checked {
+  background-color: var(--swift-list-head-ink);
+  border-color: var(--swift-list-head-ink);
+}
+
+/* The card the list sits in gets an accent edge along the top, and the
+   filter bar fades down from a tint of the page into the card, so the
+   header bar below it reads as part of the same panel. List pages only. */
+html[data-swift-themed] .layout-main-section:has(> .frappe-list) {
+  border-top: 3px solid var(--swift-accent, var(--primary));
+  border-radius: var(--swift-radius, 12px);
+  /* No overflow: hidden to clip the corners — it would turn this into the
+     scroll container and break Frappe's sticky list header. */
+}
+
+html[data-swift-themed] .layout-main-section:has(> .frappe-list) > .page-form {
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--swift-accent, var(--primary)) 6%, var(--card-bg)),
+    var(--card-bg));
+}
+
+/* ---- Rows ----------------------------------------------------------- */
+
+html[data-swift-themed] .frappe-list .list-row:not(.list-row-head) {
+  background: var(--swift-list-fill);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  transition: background-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+html[data-swift-themed] .frappe-list .list-row-container:nth-child(odd) .list-row:not(.list-row-head) {
+  background: var(--swift-list-stripe);
+}
+
+html[data-swift-themed] .frappe-list .list-row-container:last-child .list-row {
+  border-bottom: 0;
+}
+
+/* Frappe tints the container on hover; the row is what carries the fill
+   now, so the container stays clear. */
+html[data-swift-themed] .frappe-list .list-row-container:hover {
+  background: transparent;
+}
+
+html[data-swift-themed] .frappe-list .list-row-container:hover .list-row:not(.list-row-head),
+html[data-swift-themed] .frappe-list .list-row-container:focus .list-row:not(.list-row-head) {
+  background: var(--swift-list-hover);
+  box-shadow: inset 3px 0 0 var(--swift-accent, var(--primary));
+}
+
+html[dir="rtl"][data-swift-themed] .frappe-list .list-row-container:hover .list-row:not(.list-row-head),
+html[dir="rtl"][data-swift-themed] .frappe-list .list-row-container:focus .list-row:not(.list-row-head) {
+  box-shadow: inset -3px 0 0 var(--swift-accent, var(--primary));
+}
+
+/* Frappe's own hover shadow on the meta column is drawn in its highlight
+   grey, which reads as a smudge on a tinted row. */
+html[data-swift-themed] .frappe-list .list-row:hover:not(.list-row-head) .level-right {
+  box-shadow: none;
+}
+
+html[data-swift-themed] .frappe-list .list-row-container:has(.list-row-checkbox:checked) .list-row:not(.list-row-head) {
+  background: var(--swift-list-picked);
+}
+
+/* ---- Cells ---------------------------------------------------------- */
+
+html[data-swift-themed] .frappe-list .list-row .list-subject a,
+html[data-swift-themed] .frappe-list .list-row .list-subject .ellipsis {
+  font-weight: 500;
+}
+
+html[data-swift-themed] .frappe-list .list-row .list-row-activity,
+html[data-swift-themed] .frappe-list .list-row .list-row-activity .frappe-timestamp {
+  color: var(--text-muted);
+  font-size: var(--text-xs, 11px);
+}
+
+html[data-swift-themed] .frappe-list .list-row .indicator-pill {
+  padding-block: 1px;
+  line-height: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-swift-themed] .frappe-list .list-row:not(.list-row-head) {
+    transition: none;
+  }
+}
+
+/* ---- Standard filters ----------------------------------------------- */
+
+/* The fields in the bar above a list (ID, Status, the DocType's "In
+   Standard Filter" fields). Frappe draws them borderless on a grey fill
+   (common/form.scss: .form-control { border: none }), which on the tinted
+   bar read as faint smudges. Here each one is a framed field on the card
+   colour with a clearly visible border, the theme's small radius, a darker
+   border on hover and the accent with a soft ring on focus.
+
+   The border is !important and a solid mix of the text colour, not
+   --border-color: the first version used a light 18% mix that all but
+   vanished on the bar's tint, and a custom palette's --border-color is a
+   13%-alpha hairline that does the same. */
+html[data-swift-themed] .page-form .standard-filter-section {
+  --swift-filter-border: color-mix(in srgb, var(--text-color) 35%, var(--card-bg));
+  --swift-filter-border-hover: color-mix(in srgb, var(--text-color) 55%, var(--card-bg));
+  gap: 6px 0;
+}
+
+html[data-swift-themed] .page-form .standard-filter-section .form-control {
+  height: 30px;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--swift-filter-border) !important;
+  border-radius: var(--swift-radius-sm, 6px);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--text-color) 8%, transparent);
+  color: var(--text-color);
+  font-size: var(--text-sm, 13px);
+  transition: border-color 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+html[data-swift-themed] .page-form .standard-filter-section .form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+html[data-swift-themed] .page-form .standard-filter-section .form-control:hover {
+  border-color: var(--swift-filter-border-hover) !important;
+}
+
+html[data-swift-themed] .page-form .standard-filter-section .form-control:focus,
+html[data-swift-themed] .page-form .standard-filter-section .form-control:focus-visible {
+  border-color: var(--swift-accent, var(--primary)) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--swift-accent, var(--primary)) 20%, transparent);
+  outline: none;
+}
+
+/* A field holding a value is filtering the list; an accent border and a
+   faint tint say so at a glance. :placeholder-shown is false once there is
+   text in it. */
+html[data-swift-themed] .page-form .standard-filter-section input.form-control:not(:placeholder-shown) {
+  border-color: var(--swift-accent, var(--primary)) !important;
+  background-color: color-mix(in srgb, var(--swift-accent, var(--primary)) 5%, var(--card-bg)) !important;
+}
+
+/* Check filters: Frappe shows a bare box and label; frame them as a field
+   the same height as their neighbours. */
+html[data-swift-themed] .page-form .standard-filter-section .frappe-control[data-fieldtype="Check"] .checkbox {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--swift-filter-border) !important;
+  border-radius: var(--swift-radius-sm, 6px);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--text-color) 8%, transparent);
+}
+
+html[data-swift-themed] .page-form .standard-filter-section .frappe-control[data-fieldtype="Check"] .checkbox:hover {
+  border-color: var(--swift-filter-border-hover) !important;
+}
+
+html[data-swift-themed] .page-form .standard-filter-section .frappe-control[data-fieldtype="Check"] .checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: var(--text-sm, 13px);
+  color: var(--text-color);
+}
+
+/* ---- Width ------------------------------------------------------------ */
+
+/* The list runs edge to edge in its card. It used to sit 32px in on each
+   side: the card's own 16px padding plus Frappe's 15px margin on
+   .frappe-list. The card has no padding now (swift-base.css), and the
+   margin comes off here. The filter bar and the paging buttons keep 12px
+   inside, so their controls do not touch the card's edge. List pages only
+   (.layout-main-list). */
+
+html[data-swift-themed] .layout-main-section.layout-main-list > .frappe-list {
+  margin-inline: 0;
+}
+
+html[data-swift-themed] .layout-main-section.layout-main-list > .page-form {
+  margin-inline: 0;
+  padding-inline: 12px;
+  /* Frappe's 5px; the bar's fields carry their own spacing. */
+  padding-top: 0;
+}
+
+html[data-swift-themed] .layout-main-section.layout-main-list .list-paging-area {
+  padding-inline: 12px;
+}

@@ -1,0 +1,20 @@
+<!-- Swift Theme icons.
+
+     Loaded into every desk page through hooks.py app_include_icons, beside
+     Frappe's own sprites, so each symbol here works like a built-in icon:
+     frappe.utils.icon("mim-art-card") draws <symbol id="icon-mim-art-card">.
+
+     Draw in currentColor (stroke and/or fill) so an icon takes the colour of
+     wherever it is placed; a hard-coded colour would ignore the theme.
+
+     mim-art-card — the empty-list icon (swift-empty-list.js). Until its
+     symbol is added here, empty lists fall back to each DocType's own icon.
+     To add it: paste the artwork's shapes inside a symbol like this, keeping
+     its viewBox:
+
+       <symbol viewBox="0 0 24 24" id="icon-mim-art-card">
+         ...paths...
+       </symbol>
+-->
+<svg id="swift-theme-symbols" aria-hidden="true" style="display: none;" class="icon" xmlns="http://www.w3.org/2000/svg">
+</svg>

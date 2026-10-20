@@ -1,0 +1,25 @@
+/* Swift Theme — square avatars
+
+   User images are square with softened corners, matching the document
+   thumbnails (swift-doc-images.css), instead of Frappe's circles. Covers
+   every avatar Frappe draws through frappe.avatar(): the sidebar user chip,
+   comments and the Activity timeline, list assignments, notifications and
+   the form sidebar. The letter avatar (.standard-image) for a user with no
+   photo gets the same shape.
+
+   The corner scales with the avatar: a percentage of its own size, held
+   between 2px and 10px, so a 16px list avatar is not a rounded blob and a
+   108px profile picture is not sharp-cornered.
+
+   Shape only. The online dot on the sidebar avatar (swift-sidebar.css)
+   stays round: it is a status light, not a picture. */
+
+html[data-swift-themed] {
+  --swift-avatar-radius: clamp(2px, 18%, 10px);
+}
+
+html[data-swift-themed] .avatar-frame,
+html[data-swift-themed] .avatar img,
+html[data-swift-themed] .avatar .standard-image {
+  border-radius: var(--swift-avatar-radius);
+}

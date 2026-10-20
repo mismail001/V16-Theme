@@ -1,0 +1,106 @@
+/* Swift Theme — empty list
+
+   The panel swift-empty-list.js reworks: a brand-pair tile for the icon
+   with a status badge on its corner, a stronger title, a softer
+   description and the actions under them. Colours from the theme's pair,
+   so it follows the logo colours or the preset in use. */
+
+html[data-swift-themed] .swift-empty-state {
+  --swift-es-primary: var(--swift-primary, var(--swift-accent, var(--primary)));
+  --swift-es-secondary: var(--swift-secondary, var(--swift-accent-hover, var(--swift-es-primary)));
+
+  gap: 14px;
+  padding: 32px 16px;
+}
+
+/* ---- Icon tile ------------------------------------------------------ */
+
+html[data-swift-themed] .swift-empty-state .swift-empty-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 4px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--swift-es-primary) 16%, var(--card-bg)),
+    color-mix(in srgb, var(--swift-es-secondary) 22%, var(--card-bg)));
+  border: 1px solid color-mix(in srgb, var(--swift-es-primary) 18%, transparent);
+  box-shadow: 0 10px 24px -14px color-mix(in srgb, var(--swift-es-primary) 70%, transparent);
+  color: var(--swift-es-primary);
+}
+
+html[data-swift-themed] .swift-empty-state .swift-empty-icon > .icon {
+  width: 32px;
+  height: 32px;
+  --icon-stroke: currentColor;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+/* Says why it is empty: plus = nothing yet, search mark = filtered out. */
+html[data-swift-themed] .swift-empty-state .swift-empty-badge {
+  position: absolute;
+  inset-inline-end: -6px;
+  bottom: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--swift-es-primary);
+  color: var(--swift-accent-fg, var(--card-bg));
+  box-shadow: 0 0 0 3px var(--card-bg);
+}
+
+html[data-swift-themed] .swift-empty-state[data-swift-empty="filtered"] .swift-empty-badge {
+  background: var(--swift-es-secondary);
+}
+
+html[data-swift-themed] .swift-empty-state .swift-empty-badge .icon {
+  width: 14px;
+  height: 14px;
+  --icon-stroke: currentColor;
+  stroke: currentColor;
+  stroke-width: 2.4;
+}
+
+/* ---- Text ----------------------------------------------------------- */
+
+html[data-swift-themed] .swift-empty-state > div:nth-child(2) > :first-child {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-color);
+}
+
+html[data-swift-themed] .swift-empty-state > div:nth-child(2) > :nth-child(2) {
+  max-width: 26rem;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* ---- Actions -------------------------------------------------------- */
+
+html[data-swift-themed] .swift-empty-state .es-button {
+  margin-top: 4px;
+}
+
+html[data-swift-themed] .swift-empty-state .btn-new-doc {
+  background: var(--swift-es-primary);
+  color: var(--swift-accent-fg, var(--card-bg));
+  box-shadow: inset 0 -2px 0 var(--swift-es-secondary);
+}
+
+html[data-swift-themed] .swift-empty-state .btn-new-doc:hover {
+  background: color-mix(in srgb, var(--swift-es-primary) 88%, var(--text-color));
+}
+
+html[data-swift-themed] .swift-empty-state .btn-new-doc .icon {
+  --icon-stroke: currentColor;
+  stroke: currentColor;
+}
