@@ -89,10 +89,14 @@ body.swift-login .social-logins .es-button {
 /* ==========================================================================
    Layout: Split — a white form panel, curving into a brand-coloured panel
    ==========================================================================
-   The form sits on white at the left; the right is the brand panel, whose
-   words all come from Settings. The white panel's inner edge is rounded and
-   laid over the brand one, so the two read as a single card rather than two
-   halves butted together.
+   The brand panel, whose words all come from Settings, fills the left; the
+   form sits on white at the right. The white panel's inner (left) edge is
+   rounded and laid over the brand one, so the two read as a single card
+   rather than two halves butted together.
+
+   The sides are swapped with grid placement, not by moving the markup: the
+   form stays first in the page, so a phone (where the two stack) and a
+   screen reader still reach the sign-in form before the marketing panel.
 
    The panel takes its colour from the preset rather than a fixed palette:
    every preset should look like itself here, not like whichever one the
@@ -107,10 +111,10 @@ body.swift-login-Split .navbar { display: none !important; }
     background: var(--swift-surface, #fff);
     /* Curves into the panel beside it, and overlaps far enough that the
        curve has something to sit on. */
-    border-radius: 0 44px 44px 0;
-    margin-right: -44px;
+    border-radius: 44px 0 0 44px;
+    margin-left: -44px;
     padding: 6vh 5vw;
-    box-shadow: 26px 0 60px -34px rgba(2, 12, 27, 0.45);
+    box-shadow: -26px 0 60px -34px rgba(2, 12, 27, 0.45);
   }
 }
 
@@ -129,7 +133,8 @@ body.swift-login-Split .swift-login-brand {
       color-mix(in oklab, var(--swift-accent) 88%, #08131c) 0%,
       color-mix(in oklab, var(--swift-accent) 62%, #08131c) 52%,
       color-mix(in oklab, var(--swift-accent) 40%, #08131c) 100%);
-  padding: 8vh 6vw 8vh 9vw;
+  /* The extra inline padding is on the side the form's curve overlaps. */
+  padding: 8vh 9vw 8vh 6vw;
 }
 
 /* The panel's own glow would fight the facets; the gradient stack above
@@ -801,14 +806,21 @@ body.swift-login .swift-brand-proof span {
   color: rgba(255, 255, 255, 0.72);
 }
 
-/* ---------- Split: form on the left, panel on the right ---------- */
+/* ---------- Split: panel on the left, form on the right ---------- */
 @media (min-width: 900px) {
   body.swift-login-Split .swift-login-shell {
-    grid-template-columns: minmax(380px, 0.62fr) 1.38fr;
+    grid-template-columns: 1.38fr minmax(380px, 0.62fr);
   }
 
   body.swift-login-Split .swift-login-brand {
     display: flex;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  body.swift-login-Split .swift-login-forms {
+    grid-column: 2;
+    grid-row: 1;
   }
 }
 
@@ -968,7 +980,7 @@ body.swift-login .swift-login-shell {
 @media (max-width: 899.98px) {
   body.swift-login-Split .swift-login-forms {
     border-radius: 0;
-    margin-right: 0;
+    margin-left: 0;
     box-shadow: none;
   }
 }
