@@ -1,0 +1,1100 @@
+# Arabic translations for Swift Theme.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the Swift Theme project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Swift Theme VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-25 21:26+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: Arabic\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#. Description of the 'Background Overlay' (Select) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "A wash of the page colour over the image, so text and panels stay readable on a busy photo."
+msgstr "طبقة من لون الصفحة فوق الصورة، لتبقى النصوص واللوحات مقروءة على الصور المزدحمة."
+
+#. Description of the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "A whole design for the landing: each one decides the palette, which blocks appear, how they are arranged and what is painted behind them. It applies only while the landing is on screen - no other desk page is touched."
+msgstr "تصميم كامل للصفحة الرئيسية: كل تصميم يحدد لوحة الألوان، والكتل الظاهرة، وطريقة ترتيبها، وما يُرسم خلفها. يُطبَّق فقط أثناء عرض الصفحة الرئيسية ولا يؤثر على أي صفحة أخرى في النظام."
+
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Abyss"
+msgstr "الأعماق"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:507
+msgid "Access all modules, manage operations and grow your business efficiently."
+msgstr "الوصول إلى جميع الوحدات، وإدارة العمليات، وتنمية أعمالك بكفاءة."
+
+#. Label of the active_preset (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Active Preset"
+msgstr "النمط النشط"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:503
+msgid "All your business in {0}one{1} place"
+msgstr "كل أعمالك في {0}مكان واحد{1}"
+
+#. Description of the 'Background Image' (Attach Image) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "An image drawn behind the whole desk, in place of the backdrop. Works with presets and custom colours. Cards stay solid unless Show Backdrop Through Panels is on."
+msgstr "صورة تُرسم خلف واجهة النظام بالكامل بدلاً من الخلفية. تعمل مع الأنماط الجاهزة والألوان المخصصة. تبقى البطاقات صلبة ما لم يتم تفعيل \"إظهار الخلفية عبر اللوحات\"."
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.py:395
+msgid "Applied to {0} user(s) who had picked their own theme."
+msgstr "تم التطبيق على {0} مستخدم/مستخدمين كانوا قد اختاروا سمة خاصة بهم."
+
+#. Description of the 'Backdrop' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Applies to Custom Colors only. In Theme Preset mode each preset brings its own backdrop, so this is ignored."
+msgstr "ينطبق على الألوان المخصصة فقط. في وضع النمط الجاهز، لكل نمط خلفيته الخاصة، لذلك يتم تجاهل هذا الإعداد."
+
+#. Description of the 'Sound Events' (Table) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Attach a sound file per event key (save, submit, error, success, delete, click). Events without a file stay silent."
+msgstr "أرفق ملفاً صوتياً لكل حدث (حفظ، اعتماد، خطأ، نجاح، حذف، نقر). الأحداث بدون ملف تبقى صامتة."
+
+#. Option for the 'Sidebar Variant' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Attached"
+msgstr "مرفق"
+
+#. Option for the 'Backdrop' (Select) field in DocType 'Swift Theme Settings'
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Aurora"
+msgstr "الشفق"
+
+#. Label of the auto_dark_section (Section Break) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Auto Dark Mode"
+msgstr "الوضع الداكن التلقائي"
+
+#: swift_theme/www/login.html:222
+msgid "Back to sign in"
+msgstr "العودة لتسجيل الدخول"
+
+#. Label of the backdrop (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Backdrop"
+msgstr "الخلفية"
+
+#. Label of the background_overlay (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Background Overlay"
+msgstr "طبقة الخلفية"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Black Panther"
+msgstr "بلاك بانثر"
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.py:282
+msgid "Both Primary Color and Secondary Color are required when using Custom Colors."
+msgstr "اللون الأساسي واللون الثانوي مطلوبان عند استخدام الألوان المخصصة."
+
+#. Label of the sidebar_brand_fill (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Brand Colour Sidebar"
+msgstr "شريط جانبي بلون العلامة التجارية"
+
+#. Label of the brand_favicon (Attach Image) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Brand Favicon"
+msgstr "أيقونة الموقع للعلامة التجارية"
+
+#. Label of the brand_logo_dark (Attach Image) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Brand Logo (Dark)"
+msgstr "شعار العلامة التجارية (الداكن)"
+
+#. Label of the login_panel_section (Section Break) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Brand Panel"
+msgstr "لوحة العلامة التجارية"
+
+#. Label of the brand_section (Section Break) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Branding"
+msgstr "الهوية التجارية"
+
+#. Label of the login_points (Small Text) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Bullet Points"
+msgstr "نقاط"
+
+#. Description of the 'Primary Color' (Color) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Buttons, links and highlights."
+msgstr "الأزرار والروابط والعناصر المميزة."
+
+#. Label of the calendar_fields (Table) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Calendar Fields"
+msgstr "حقول التقويم"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Captain America"
+msgstr "كابتن أمريكا"
+
+#. Option for the 'Login Layout' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Centered"
+msgstr "في المنتصف"
+
+#. Label of the orgchart_fields (Small Text) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Chart Fields"
+msgstr "حقول المخطط"
+
+#: swift_theme/public/js/swift-empty-list.js:79
+msgid "Clear filters"
+msgstr "مسح عوامل التصفية"
+
+#. Label of the color_mode_section (Section Break) field in DocType 'Swift
+#. Theme Settings'
+#. Label of the color_mode (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Color Mode"
+msgstr "وضع الألوان"
+
+#. Label of the colour_tab (Tab Break) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Colour"
+msgstr "اللون"
+
+#. Label of the custom_strength (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Colour Strength"
+msgstr "شدة اللون"
+
+#. Option for the 'Default Density' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Comfortable"
+msgstr "مريح"
+
+#. Option for the 'Default Density' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Compact"
+msgstr "مضغوط"
+
+#. Option for the 'Default Density' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Cozy"
+msgstr "متوسط"
+
+#. Description of the 'Show Shortcuts' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Create New, Reports and Notifications, beside the greeting."
+msgstr "إنشاء جديد، والتقارير، والإشعارات، بجانب رسالة الترحيب."
+
+#: swift_theme/public/js/swift-empty-list.js:66
+#: swift_theme/public/js/swift-empty-list.js:68
+msgid "Create {0}"
+msgstr "إنشاء {0}"
+
+#. Description of the 'Enable Command Palette' (Check) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Ctrl+Shift+T opens the Swift command palette."
+msgstr "Ctrl+Shift+T يفتح لوحة أوامر Swift."
+
+#. Option for the 'Color Mode' (Select) field in DocType 'Swift Theme Settings'
+#. Label of the custom_colors_section (Section Break) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/public/js/swift-theme-dialog.js:133
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Custom Colors"
+msgstr "ألوان مخصصة"
+
+#. Label of the enable_home_page (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Custom Home Page"
+msgstr "صفحة رئيسية مخصصة"
+
+#. Label of the custom_mode (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Custom Mode"
+msgstr "الوضع المخصص"
+
+#: swift_theme/public/js/swift-theme-dialog.js:243
+msgid "Custom colours applied"
+msgstr "تم تطبيق الألوان المخصصة"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:516
+msgid "Customize Workspace"
+msgstr "تخصيص مساحة العمل"
+
+#. Label of the auto_dark_end (Time) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Dark Mode Ends"
+msgstr "نهاية الوضع الداكن"
+
+#. Label of the auto_dark_start (Time) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Dark Mode Starts"
+msgstr "بداية الوضع الداكن"
+
+#. Label of the default_density (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Default Density"
+msgstr "الكثافة الافتراضية"
+
+#. Label of the default_font_family (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Default Font Family"
+msgstr "نوع الخط الافتراضي"
+
+#. Label of the default_font_scale (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Default Font Scale"
+msgstr "حجم الخط الافتراضي"
+
+#. Label of the default_radius (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Default Shape"
+msgstr "الشكل الافتراضي"
+
+#. Label of the desk_tab (Tab Break) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Desk"
+msgstr "سطح المكتب"
+
+#. Label of the defaults_section (Section Break) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Desk Defaults"
+msgstr "الإعدادات الافتراضية لسطح المكتب"
+
+#. Label of the home_preset (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Desk Preset"
+msgstr "نمط سطح المكتب"
+
+#: swift_theme/www/login.html:245
+msgid "Didn't receive the link?"
+msgstr "ما وصلك الرابط؟"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Doctor Strange"
+msgstr "دكتور سترينج"
+
+#. Description of the 'Sidebar Texture' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Draw a faint contour pattern across the lower half of the sidebar. It is cut from the sidebar's own text colour, so it follows every preset and stays legible on a light or a dark panel."
+msgstr "رسم نقش خفيف على النصف السفلي من الشريط الجانبي. مأخوذ من لون نص الشريط الجانبي نفسه، لذا يتماشى مع كل نمط ويبقى واضحاً على اللوحات الفاتحة والداكنة."
+
+#. Description of the 'Enable Backdrops' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Draw the preset's own background behind the desk. Turn this off for a plain, flat background."
+msgstr "رسم خلفية النمط الخاصة خلف سطح المكتب. أوقف هذا الخيار للحصول على خلفية سادة ومسطحة."
+
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Dune"
+msgstr "الكثبان"
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.py:307
+msgid "Duplicate sound event {0} in row {1}."
+msgstr "حدث صوتي مكرر {0} في الصف {1}."
+
+#. Description of the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Each preset ships its own stylesheet; only the selected one is loaded."
+msgstr "لكل نمط ملف تنسيق خاص به؛ ويتم تحميل النمط المختار فقط."
+
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Eclipse"
+msgstr "الكسوف"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:270
+msgid "Edit Layout"
+msgstr "تعديل التخطيط"
+
+#. Label of the enable_auto_dark (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Auto Dark"
+msgstr "تفعيل الوضع الداكن التلقائي"
+
+#. Label of the enable_backdrops (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Backdrops"
+msgstr "تفعيل الخلفيات"
+
+#. Label of the enable_command_palette (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Command Palette"
+msgstr "تفعيل لوحة الأوامر"
+
+#. Label of the enable_focus_mode (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Focus / Reading Mode"
+msgstr "تفعيل وضع التركيز / القراءة"
+
+#. Label of the enable_perf_mode (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Performance Mode"
+msgstr "تفعيل وضع الأداء"
+
+#. Label of the enable_print_theming (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Print Theming"
+msgstr "تفعيل تنسيق الطباعة"
+
+#. Label of the enable_sounds (Check) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Sounds"
+msgstr "تفعيل الأصوات"
+
+#. Label of the enable_styled_scrollbar (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Styled Scrollbar"
+msgstr "تفعيل شريط التمرير المنسق"
+
+#. Label of the enable_switcher (Check) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Theme Switcher"
+msgstr "تفعيل مبدّل السمات"
+
+#. Label of the enable_toast_theming (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Enable Toast Theming"
+msgstr "تفعيل تنسيق الإشعارات المنبثقة"
+
+#. Label of the event_key (Select) field in DocType 'Swift Theme Sound Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "Event Key"
+msgstr "مفتاح الحدث"
+
+#. Description of the 'Chart Fields' (Small Text) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Extra Employee fields to show on each card, comma separated - for example cell_number, department. They are read with the viewer's own permissions, so a field they cannot see simply does not appear. Leave empty for name and designation only."
+msgstr "حقول إضافية للموظف تظهر في كل بطاقة، مفصولة بفواصل - مثلاً cell_number, department. تُقرأ بصلاحيات المستخدم نفسه، فالحقل الذي لا يستطيع رؤيته لن يظهر. اتركه فارغاً لعرض الاسم والمسمى الوظيفي فقط."
+
+#. Label of the fields (Small Text) field in DocType 'Swift Calendar Field'
+#: swift_theme/swift_theme/doctype/swift_calendar_field/swift_calendar_field.json
+msgid "Extra Fields"
+msgstr "حقول إضافية"
+
+#. Label of the extras_tab (Tab Break) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Extras"
+msgstr "إضافات"
+
+#. Description of the 'Enable Focus / Reading Mode' (Check) field in DocType
+#. 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "F toggles focus mode, R toggles reading mode."
+msgstr "F يبدّل وضع التركيز، وR يبدّل وضع القراءة."
+
+#. Option for the 'Backdrop' (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Facets"
+msgstr "الأوجه"
+
+#. Label of the features_tab (Tab Break) field in DocType 'Swift Theme
+#. Settings'
+#. Label of the features_section (Section Break) field in DocType 'Swift Theme
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Features"
+msgstr "المميزات"
+
+#: swift_theme/api/boot.py:424
+msgid "Field not allowed: {0}"
+msgstr "الحقل غير مسموح: {0}"
+
+#. Description of the 'Extra Fields' (Small Text) field in DocType 'Swift
+#. Calendar Field'
+#: swift_theme/swift_theme/doctype/swift_calendar_field/swift_calendar_field.json
+msgid "Fieldnames, comma separated - for example customer, status, grand_total. They are read with the reader's own permissions, so a field they cannot see simply does not arrive."
+msgstr "أسماء الحقول مفصولة بفواصل - مثلاً customer, status, grand_total. تُقرأ بصلاحيات القارئ نفسه، فالحقل الذي لا يستطيع رؤيته لن يصل."
+
+#. Description of the 'Brand Colour Sidebar' (Check) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Fill the sidebar with the theme's own colour instead of the neutral surface. Text and icons switch to the contrast colour that preset already computes."
+msgstr "تعبئة الشريط الجانبي بلون السمة بدلاً من السطح المحايد. تتحول النصوص والأيقونات إلى لون التباين الذي يحسبه النمط مسبقاً."
+
+#. Option for the 'Sidebar Variant' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Floating"
+msgstr "عائم"
+
+#: swift_theme/www/login.html:66
+msgid "Forgot password?"
+msgstr "نسيت كلمة المرور؟"
+
+#. Description of the 'Calendar Fields' (Table) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Frappe's calendar shows one field per record - the subject. Add rows here to show more underneath it: pick the doctype, then list the fieldnames. Each value is fetched with the reader's own permissions, so nobody sees a field they could not read on the record itself."
+msgstr "تقويم Frappe يعرض حقلاً واحداً لكل سجل - وهو الموضوع. أضف صفوفاً هنا لعرض المزيد تحته: اختر نوع المستند ثم اكتب أسماء الحقول. تُجلب كل قيمة بصلاحيات القارئ نفسه، فلا أحد يرى حقلاً لا يستطيع قراءته في السجل نفسه."
+
+#. Option for the 'Navbar Variant' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Glass"
+msgstr "زجاجي"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:471
+msgid "Good afternoon"
+msgstr "مساء الخير"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:472
+msgid "Good evening"
+msgstr "مساء الخير"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:470
+msgid "Good morning"
+msgstr "صباح الخير"
+
+#. Label of the custom_sidebar_gradient (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Gradient Sidebar"
+msgstr "شريط جانبي متدرج"
+
+#. Description of the 'Secondary Color' (Color) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Gradients and hover states."
+msgstr "التدرجات وحالات التمرير."
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:494
+msgid "Here's an overview of your business."
+msgstr "هذه نظرة عامة على أعمالك."
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:490
+msgid "Here's what's happening in your workspace today."
+msgstr "هذا ما يحدث في مساحة عملك اليوم."
+
+#. Label of the login_stat_label (Data) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Highlight Caption"
+msgstr "وصف الرقم المميز"
+
+#. Label of the login_stat_value (Data) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Highlight Figure"
+msgstr "الرقم المميز"
+
+#. Label of the home_cards (Table MultiSelect) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Home Cards"
+msgstr "بطاقات الصفحة الرئيسية"
+
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Honeycomb"
+msgstr "خلية النحل"
+
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Horizon"
+msgstr "الأفق"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Hulk"
+msgstr "هالك"
+
+#. Option for the 'Sidebar Variant' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Icon-only"
+msgstr "أيقونات فقط"
+
+#. Description of the 'Sidebar Variant' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Icon-only collapses the sidebar to icons and expands it on hover."
+msgstr "وضع \"أيقونات فقط\" يطوي الشريط الجانبي إلى أيقونات ويوسّعه عند التمرير فوقه."
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Iron Man"
+msgstr "آيرون مان"
+
+#. Option for the 'Default Font Scale' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "L"
+msgstr "كبير"
+
+#. Description of the 'Custom Home Page' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Land on a Swift home page instead of the default workspace. It shows the apps this user is allowed to open, so nothing appears here that they could not already reach. Turn it off and the desk goes straight back to Frappe's own landing."
+msgstr "الانتقال إلى صفحة Swift الرئيسية بدلاً من مساحة العمل الافتراضية. تعرض التطبيقات المسموح لهذا المستخدم بفتحها فقط، فلا يظهر فيها شيء لا يستطيع الوصول إليه أصلاً. عند إيقافها يعود النظام إلى الصفحة الرئيسية الافتراضية في Frappe."
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:332
+msgid "Layout saved"
+msgstr "تم حفظ التخطيط"
+
+#. Description of the 'Show Backdrop Through Panels' (Check) field in DocType
+#. 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Let the background show through cards, the sidebar and table headers instead of being hidden behind them."
+msgstr "السماح للخلفية بالظهور عبر البطاقات والشريط الجانبي وعناوين الجداول بدلاً من إخفائها خلفها."
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:493
+msgid "Let's make today productive."
+msgstr "خلّنا نخلّي يومنا مثمر."
+
+#: swift_theme/www/login.html:187
+msgid "Let's setup your account."
+msgstr "خلّنا نجهّز حسابك."
+
+#: swift_theme/public/js/swift-theme-dialog.js:79
+msgid "Light or dark comes with this site's theme."
+msgstr "الوضع الفاتح أو الداكن يتبع سمة هذا الموقع."
+
+#. Label of the login_bg_image (Attach Image) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Login Background Image"
+msgstr "صورة خلفية تسجيل الدخول"
+
+#. Label of the login_layout (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Login Layout"
+msgstr "تخطيط تسجيل الدخول"
+
+#. Label of the login_tagline (Data) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Login Tagline"
+msgstr "عبارة تسجيل الدخول"
+
+#: swift_theme/www/login.html:250
+msgid "Login with password"
+msgstr "تسجيل الدخول بكلمة المرور"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Loki"
+msgstr "لوكي"
+
+#. Option for the 'Default Font Scale' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "M"
+msgstr "متوسط"
+
+#. Option for the 'Backdrop' (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Mesh"
+msgstr "الشبكة"
+
+#. Option for the 'Login Layout' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Minimal"
+msgstr "بسيط"
+
+#. Label of the navbar_variant (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Navbar Variant"
+msgstr "نمط شريط التنقل"
+
+#. Label of the sidebar_section (Section Break) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Navigation"
+msgstr "التنقل"
+
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Nebula"
+msgstr "السديم"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:635
+msgid "Nothing here yet."
+msgstr "لا يوجد شيء هنا بعد."
+
+#. Description of the 'Home Cards' (Table MultiSelect) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Number Cards to show as figures across the top - sales, invoices, payments, whatever you pick. Each card is only drawn for a user who can read its doctype, and its figure is counted through the same permissions, so User Permissions (company, territory) narrow it automatically. Leave empty for no figures."
+msgstr "بطاقات الأرقام التي تظهر كأرقام في الأعلى - المبيعات، الفواتير، المدفوعات، أو أي شيء تختاره. لا تُعرض البطاقة إلا لمستخدم يستطيع قراءة نوع المستند الخاص بها، ويُحسب رقمها بنفس الصلاحيات، لذا تقوم صلاحيات المستخدم (الشركة، المنطقة) بتضييقها تلقائياً. اتركه فارغاً لعدم عرض أرقام."
+
+#. Description of the 'Heading' (Small Text) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "One line per row. Each row becomes its own line in the heading."
+msgstr "سطر لكل صف. كل صف يصبح سطراً مستقلاً في العنوان."
+
+#. Description of the 'Bullet Points' (Small Text) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "One per line. Each gets a tick. Leave empty to show none."
+msgstr "عنصر في كل سطر. كل عنصر يحصل على علامة صح. اتركه فارغاً لعدم عرض أي عنصر."
+
+#. Label of the orgchart_section (Section Break) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Organizational Chart"
+msgstr "الهيكل التنظيمي"
+
+#. Description of the 'Color Mode' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Pick a ready-made preset, or set your own primary and secondary colours."
+msgstr "اختر نمطاً جاهزاً، أو حدد ألوانك الأساسية والثانوية."
+
+#: swift_theme/public/js/swift-theme-dialog.js:211
+msgid "Pick your two colours"
+msgstr "اختر لونيك"
+
+#. Option for the 'Default Shape' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Pill"
+msgstr "كبسولة"
+
+#: swift_theme/www/login.html:232
+msgid "Please check your email."
+msgstr "فضلاً تحقق من بريدك الإلكتروني."
+
+#: swift_theme/www/login.html:202
+msgid "Please enter your email, we'll send you password reset link"
+msgstr "فضلاً أدخل بريدك الإلكتروني، وبنرسل لك رابط إعادة تعيين كلمة المرور"
+
+#. Label of the print_font_family (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Print Font Family"
+msgstr "نوع خط الطباعة"
+
+#. Option for the 'Desk Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Pulse"
+msgstr "النبض"
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.js:3
+msgid "Reapply Theme"
+msgstr "إعادة تطبيق السمة"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:374
+msgid "Refreshed"
+msgstr "تم التحديث"
+
+#: swift_theme/www/login.html:245
+msgid "Resend"
+msgstr "إعادة الإرسال"
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:359
+msgid "Reset the app layout to its defaults?"
+msgstr "إعادة تعيين تخطيط التطبيقات إلى الإعدادات الافتراضية؟"
+
+#. Option for the 'Default Shape' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Rounded"
+msgstr "مستدير"
+
+#. Description of the 'Gradient Sidebar' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Run the sidebar from the Primary colour into the Secondary one. Without it the panel is Primary shading into its own darker end, so the Secondary colour never reaches the sidebar at all. Presets keep their own hand-picked pair and are not affected."
+msgstr "تدرج الشريط الجانبي من اللون الأساسي إلى اللون الثانوي. بدونه تكون اللوحة باللون الأساسي متدرجة إلى درجته الأغمق، فلا يصل اللون الثانوي إلى الشريط الجانبي إطلاقاً. الأنماط الجاهزة تحتفظ بزوج ألوانها المختار ولا تتأثر."
+
+#. Option for the 'Default Font Scale' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "S"
+msgstr "صغير"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Scarlet Witch"
+msgstr "سكارليت ويتش"
+
+#: swift_theme/public/js/swift-theme-dialog.js:215
+msgid "Secondary"
+msgstr "ثانوي"
+
+#. Label of the secondary_color (Color) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Secondary Color"
+msgstr "اللون الثانوي"
+
+#: swift_theme/www/login.html:218
+msgid "Send Link"
+msgstr "إرسال الرابط"
+
+#. Option for the 'Default Shape' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Sharp"
+msgstr "حاد"
+
+#. Label of the show_backdrop_through (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Show Backdrop Through Panels"
+msgstr "إظهار الخلفية عبر اللوحات"
+
+#. Label of the login_show_brand_panel (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Show Brand Panel"
+msgstr "إظهار لوحة العلامة التجارية"
+
+#. Label of the home_greeting (Check) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Show Greeting"
+msgstr "إظهار الترحيب"
+
+#. Label of the home_shortcuts (Check) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Show Shortcuts"
+msgstr "إظهار الاختصارات"
+
+#. Label of the enable_sidebar_counts (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Show Sidebar Record Counts"
+msgstr "إظهار عدد السجلات في الشريط الجانبي"
+
+#. Description of the 'Show Sidebar Record Counts' (Check) field in DocType
+#. 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Show how many records each DocType link in the sidebar leads to. Counts respect each user's permissions and the link's filters."
+msgstr "إظهار عدد السجلات التي يؤدي إليها كل رابط نوع مستند في الشريط الجانبي. الأعداد تراعي صلاحيات كل مستخدم وعوامل تصفية الرابط."
+
+#. Description of the 'Enable Theme Switcher' (Check) field in DocType 'Swift
+#. Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Show the Theme chip in the navbar so users can switch theme themselves."
+msgstr "إظهار زر السمة في شريط التنقل ليتمكن المستخدمون من تغيير السمة بأنفسهم."
+
+#. Description of the 'Login Tagline' (Data) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Shown under the login heading."
+msgstr "يظهر تحت عنوان تسجيل الدخول."
+
+#. Label of the sidebar_texture (Check) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Sidebar Texture"
+msgstr "نقش الشريط الجانبي"
+
+#. Label of the sidebar_variant (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Sidebar Variant"
+msgstr "نمط الشريط الجانبي"
+
+#: swift_theme/www/login.html:133 swift_theme/www/login.html:156
+#: swift_theme/www/login.html:172 swift_theme/www/login.html:229
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#: swift_theme/www/login.html:187
+msgid "Sign Up"
+msgstr "إنشاء حساب"
+
+#. Option for the 'Backdrop' (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Silk"
+msgstr "الحرير"
+
+#. Label of the sound_events (Table) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Sound Events"
+msgstr "الأحداث الصوتية"
+
+#. Label of the sound_file (Attach) field in DocType 'Swift Theme Sound Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "Sound File"
+msgstr "الملف الصوتي"
+
+#. Description of the 'Sound File' (Attach) field in DocType 'Swift Theme Sound
+#. Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "Sound file for this event"
+msgstr "الملف الصوتي لهذا الحدث"
+
+#. Label of the sounds_section (Section Break) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Sounds"
+msgstr "الأصوات"
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.js:192
+msgid "Sounds are enabled but no sound file is attached. Add a row to <b>Sound Events</b>, pick an <b>Event Key</b> and attach an audio file — events without a file stay silent."
+msgstr "الأصوات مفعّلة لكن لم يتم إرفاق أي ملف صوتي. أضف صفاً في <b>الأحداث الصوتية</b>، واختر <b>مفتاح الحدث</b> وأرفق ملفاً صوتياً — الأحداث بدون ملف تبقى صامتة."
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Star-Lord"
+msgstr "ستار لورد"
+
+#. Description of the 'Colour Strength' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Subtle keeps cards neutral and puts the colour in accents. Bold gives the cards the brand tone."
+msgstr "\"هادئ\" يبقي البطاقات محايدة ويضع اللون في العناصر المميزة. \"جريء\" يعطي البطاقات لون العلامة التجارية."
+
+#. Name of a DocType
+#: swift_theme/swift_theme/doctype/swift_calendar_field/swift_calendar_field.json
+msgid "Swift Calendar Field"
+msgstr "حقل تقويم Swift"
+
+#. Name of a DocType
+#: swift_theme/swift_theme/doctype/swift_home_card/swift_home_card.json
+msgid "Swift Home Card"
+msgstr "بطاقة Swift الرئيسية"
+
+#. Label of a Desktop Icon
+#: swift_theme/config/desktop.py:9 swift_theme/desktop_icon/swift_theme.json
+#: swift_theme/public/js/swift-theme-dialog.js:88
+msgid "Swift Theme"
+msgstr "سمة Swift"
+
+#. Name of a DocType
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Swift Theme Settings"
+msgstr "إعدادات سمة Swift"
+
+#. Name of a DocType
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "Swift Theme Sound Event"
+msgstr "حدث صوتي لسمة Swift"
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.js:5
+msgid "Swift Theme reapplied"
+msgstr "تمت إعادة تطبيق سمة Swift"
+
+#. Description of the 'Enable Auto Dark' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Switch the desk to dark mode between the times below."
+msgstr "تحويل سطح المكتب إلى الوضع الداكن بين الأوقات أدناه."
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Thanos"
+msgstr "ثانوس"
+
+#. Description of the 'Show Greeting' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "The greeting line at the top, by time of day."
+msgstr "سطر الترحيب في الأعلى، حسب وقت اليوم."
+
+#. Description of the 'Show Brand Panel' (Check) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "The panel beside the sign-in form. Turn it off for a plain, centred form."
+msgstr "اللوحة بجانب نموذج تسجيل الدخول. أوقفها للحصول على نموذج بسيط في المنتصف."
+
+#: swift_theme/public/js/user_form.js:28
+msgid "The theme switcher is turned off in Swift Theme Settings."
+msgstr "مبدّل السمات متوقف في إعدادات سمة Swift."
+
+#. Option for the 'Color Mode' (Select) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Theme Preset"
+msgstr "النمط الجاهز"
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.py:539
+msgid "Theme not found"
+msgstr "السمة غير موجودة"
+
+#: swift_theme/public/js/swift-theme-dialog.js:107
+msgid "Theme set to {0}"
+msgstr "تم تعيين السمة إلى {0}"
+
+#. Option for the 'Navbar Variant' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Transparent"
+msgstr "شفاف"
+
+#. Description of the 'Custom Mode' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Two hex codes cannot say whether you want a light or a dark desk."
+msgstr "رمزان سداسيان لا يكفيان لمعرفة ما إذا كنت تريد سطح مكتب فاتحاً أو داكناً."
+
+#: swift_theme/public/js/swift-theme-dialog.js:89
+msgid "Use site default"
+msgstr "استخدام الإعداد الافتراضي للموقع"
+
+#. Description of the 'Brand Logo (Dark)' (Attach Image) field in DocType
+#. 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Used when the viewer is in dark mode. Falls back to Brand Logo."
+msgstr "يُستخدم عندما يكون المستخدم في الوضع الداكن. يرجع إلى شعار العلامة التجارية إذا لم يُحدد."
+
+#: swift_theme/public/js/swift-theme-dialog.js:126
+msgid "Using the site theme"
+msgstr "يتم استخدام سمة الموقع"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Venom"
+msgstr "فينوم"
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Vision"
+msgstr "فيجن"
+
+#. Label of the volume_level (Int) field in DocType 'Swift Theme Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Volume Level (%)"
+msgstr "مستوى الصوت (%)"
+
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.py:297
+msgid "Volume Level must be between 0 and 100."
+msgstr "يجب أن يكون مستوى الصوت بين 0 و 100."
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:487
+msgid "Welcome back"
+msgstr "أهلاً بعودتك"
+
+#: swift_theme/www/login.html:156 swift_theme/www/login.html:172
+#: swift_theme/www/login.html:229
+msgid "Welcome! Please sign in to continue."
+msgstr "أهلاً وسهلاً! فضلاً سجّل دخولك للمتابعة."
+
+#. Option for the 'Active Preset' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "Winter Soldier"
+msgstr "وينتر سولجر"
+
+#. Option for the 'Default Font Scale' (Select) field in DocType 'Swift Theme
+#. Settings'
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.json
+msgid "XL"
+msgstr "كبير جداً"
+
+#: swift_theme/api/boot.py:437
+#: swift_theme/swift_theme/doctype/swift_theme_settings/swift_theme_settings.py:551
+msgid "You are not permitted to change the theme."
+msgstr "ليس لديك صلاحية لتغيير السمة."
+
+#: swift_theme/swift_theme/page/swift_home/swift_home.js:528
+msgid "Your Apps"
+msgstr "تطبيقاتك"
+
+#. Option for the 'Event Key' (Select) field in DocType 'Swift Theme Sound
+#. Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "click"
+msgstr "نقر"
+
+#. Option for the 'Event Key' (Select) field in DocType 'Swift Theme Sound
+#. Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "error"
+msgstr "خطأ"
+
+#. Option for the 'Event Key' (Select) field in DocType 'Swift Theme Sound
+#. Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "login"
+msgstr "تسجيل الدخول"
+
+#. Option for the 'Event Key' (Select) field in DocType 'Swift Theme Sound
+#. Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "notification"
+msgstr "إشعار"
+
+#: swift_theme/public/js/swift-website.js:61
+msgid "or login with"
+msgstr "أو سجّل الدخول عبر"
+
+#. Option for the 'Event Key' (Select) field in DocType 'Swift Theme Sound
+#. Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "save"
+msgstr "حفظ"
+
+#. Option for the 'Event Key' (Select) field in DocType 'Swift Theme Sound
+#. Event'
+#: swift_theme/swift_theme/doctype/swift_theme_sound_event/swift_theme_sound_event.json
+msgid "success"
+msgstr "نجاح"
+
+#: swift_theme/public/js/swift-sidebar-counts.js:73
+msgid "{0} records"
+msgstr "{0} سجل"
+
