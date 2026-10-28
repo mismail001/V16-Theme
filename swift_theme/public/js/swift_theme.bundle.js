@@ -22,6 +22,8 @@ import "./swift-sidebar.js";
 import "./swift-sidebar-counts.js";
 import "./swift-workspace-icons.js";
 import "./swift-desktop-icons.js";
+// ZATCA status when KSA Compliance is installed, the business overview otherwise
+import "./swift-desk-dashboard.js";
 import "./swift-user-menu.js";
 import "./swift-field-icons.js";
 import "./swift-doc-images.js";
